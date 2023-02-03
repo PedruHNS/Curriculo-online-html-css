@@ -1,0 +1,370 @@
+@charset "UTF-8" ;
+
+*{ 
+    margin: 0;
+    box-sizing: border-box; 
+    text-decoration: none; 
+}
+
+header{
+    background-color: rgba(12, 175, 240, 0.76);
+    padding: 10px;
+}
+
+h1{
+    text-align: center;    
+}
+
+/**-----------------------------------------------------------------------------------------------------------------------------------------**/
+
+
+main{ 
+    position: relative;
+    width: 940px;
+    margin: 25px auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px;
+    background-color: azure;
+}
+
+.apresentacao{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    align-content: space-around ;
+    margin: 0 0 5px;
+}
+
+.apresentacao h2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.imagem-perfil{
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+    
+}
+
+#perfil{
+    height: 250px;
+    width: 250px;
+    margin: 10px;
+    
+}
+
+#perfil:hover{
+    transform: scale(1.1);
+}
+
+/**----------------------------------------------------------------------div dados---------------------------------------------------------**/
+
+.dados{
+    background-color: azure;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   
+   
+}
+
+.dados:hover, .resumo:hover, .academica:hover, .cursos-complementares:hover, section:hover{
+    transition: 1s all;
+    box-shadow: 1px 1px 1px 1px; 
+    background-color: rgb(204, 239, 253);
+    transform: scale(1.1);
+}
+.dados h3, .contatos h3 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    align-content: space-around;
+}
+
+.dados_pessoais, .contatos{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    padding: 5px;  
+    align-items: center;
+    
+}
+
+.dados_pessoais:hover h3, .contatos:hover h3{
+    transition: 1s all;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.itens span{
+    
+    font-weight: bold;
+}
+.itens:hover span{
+    text-decoration: underline;
+}
+.itens:hover{
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.itens-contatos{
+    display: flex;
+    align-items: center;
+}
+
+.itens-contatos a abbr{
+    color:black;
+    text-decoration: none;
+
+}
+/**----------------------------------------------------------------------div resumo---------------------------------------------------------**/
+
+.resumo{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0 0px;
+    padding: 10px;
+    
+}
+
+.resumo:hover h3{
+    transition: 1s all;
+    text-decoration: underline;
+    font-size: 20px; 
+}
+
+#text_resumo{
+    margin: 5px 0px 5px;
+    text-align: justify;
+    font-size: 17px;
+     
+}
+
+.resumo span{
+    text-align: center;
+    font-weight: bold;
+    color: rgba(12, 175, 240, 0.993);
+    
+}
+
+.resumo:hover span{
+    transition: 1s all;
+    transform: scale(1.1);
+    color: blue;
+}
+
+abbr{
+    text-decoration: underline;
+    font-style: italic;
+}
+
+/**-----------------------------------------------------div academica/cursos complementares------------------------------------------------**/
+
+.academica, .cursos-complementares{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+   
+     
+}
+
+.academica h3, .cursos-complementares h3{
+    margin: 0 0 5px;
+
+}
+
+.academica:hover h3, .cursos-complementares:hover h3, section:hover h3{
+    transition: 1s all;
+    text-decoration: underline;
+    font-size: 20px; 
+}
+
+.academica li, .cursos-complementares li{
+    margin: 3px 0px 3px;
+}
+
+li:hover .span-concluido{
+    transition: 500ms all;
+    text-transform: uppercase;
+    background-color: rgb(19, 182, 19);
+}
+
+li:hover .span-andamento{
+    transition: 500ms all;
+    text-transform: uppercase;
+    background-color: rgb(252, 164, 2);
+}
+
+/**----------------------------------------------------------div deck------------------------------------------------------------**/
+
+section h3{
+    
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+   
+
+}
+.deck{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    padding: 5px;
+    perspective: 1000px;
+    
+    
+    
+
+}
+
+.flip{
+    position: relative;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+
+}
+
+.card:hover .flip{
+   transform: rotateY(180deg); 
+}
+
+.front, .back{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    position: absolute;
+    
+    border: 1px solid;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px;
+
+    padding: 10px;
+    
+    backface-visibility: hidden;
+    background-color: white;
+   
+}
+
+.front h4{
+    font-size: 17px;
+    font-family: sans-serif;
+}
+
+.logo-empresa{
+    width: 250px;
+    height: 250px;
+}
+
+.back{
+    background-color: rgba(126, 206, 238, 0.76);
+    transform: rotateY(180deg);
+}
+
+.back span{
+   font-weight: bold;
+}
+.back .periodo{
+    padding: 5px;
+}
+
+.back .cargo{
+    padding: 5px;
+}
+
+.back .atividade{
+    padding: 10px;
+    text-align: justify;
+}
+
+.back a{
+    color: black;
+    border: 1px solid;
+    border-radius: 8px;
+    
+    margin: 5px;
+    padding: 5px;
+    background-color: white ;
+}
+
+.site-empresa:hover{
+    font-weight: bold;
+    box-shadow: 2px 2px 2px;
+    background-color: rgba(6, 177, 245, 0.685);
+
+}
+
+
+/**----------------------------------------------------------------footer-------------------------------------------------------------------**/
+
+footer{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    background-color: rgba(12, 175, 240, 0.76) ;
+}
+
+footer h3{
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+    padding: 10px 0 30px;
+}
+
+.redes-sociais{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.redes-sociais li{
+    display: inline;
+}
+
+li:hover .fb, li:hover .insta, li:hover .linked, li:hover .git{
+    transform: scale(1.2);
+}
+
+.redes-sociais p{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#copyright{
+    display: flex;
+    justify-content: center;
+    margin: 25px 0 0;
+    padding: 0 0 10px;
+    font-style: italic;
+}
+
+    
